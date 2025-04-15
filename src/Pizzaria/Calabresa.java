@@ -1,11 +1,16 @@
 package Pizzaria;
 
-public class Calabresa extends Adicional{
-    public Calabresa(Pizza pizza){
+public class Calabresa extends PizzaDecorator {
+
+    public Calabresa(Pizza pizza) {
         super(pizza);
     }
 
-    public float getPreco(){
-        return pizza.getPreco() + 7.5f;
+    public String getDescricao() {
+        return pizza.getDescricao() + ", Calabresa";
+    }
+
+    public float getPreco() {
+        return pizza.getPreco() + 3.0f;
     }
 }
